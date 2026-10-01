@@ -1,0 +1,42 @@
+pipeline:
+  id: adxl345-tap-demo
+
+sources:
+  - id: acceleration
+    device: adxl345
+    config:
+      sample_interval_ms: 20
+
+steps:
+  - id: tap_trigger
+    op: threshold-trigger
+    input: acceleration.z
+    config:
+      threshold: 1.5
+      fire_below: false
+
+taps:
+  - name: accel_x
+    kind: retained
+    type: f32
+    source: acceleration.x
+
+  - name: accel_y
+    kind: retained
+    type: f32
+    source: acceleration.y
+
+  - name: accel_z
+    kind: retained
+    type: f32
+    source: acceleration.z
+
+  - name: tap
+    kind: event
+    type: ThresholdAlarm
+    source: tap_trigger
+
+outlets:
+  - name: led_cmd
+    type: DigitalState
+    device: demo_led

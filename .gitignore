@@ -1,0 +1,20 @@
+# Rust build output
+target/
+**/target/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key

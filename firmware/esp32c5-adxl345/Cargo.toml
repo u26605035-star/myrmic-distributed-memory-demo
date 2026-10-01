@@ -1,0 +1,84 @@
+[package]
+name = "tap-node-c5"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[package.metadata.myrmic]
+firmware = "esp32c5"
+
+# Link-time optimization is required here, not merely an optimization. On the
+# BLE + PSRAM chips (C5/C61) the firmware otherwise boots into a watchdog reset
+# loop: the esp-mmu routine that maps the AOT flash region runs with the flash
+# cache disabled, and without cross-crate inlining some of its callees remain in
+# XIP flash, which cannot be fetched during that window. `thin` inlines them
+# while keeping build times reasonable. C6 does not need it, but it is harmless.
+[profile.release]
+lto = "thin"
+
+[features]
+default = ["esp32c5", "pipeline"]
+
+# Target SoC. A firmware crate declares its own chip feature and forwards it:
+# `esp_firmware::board!` and `esp_firmware_build::configure()` both read the
+# chip from the crate that invokes them.
+esp32c5 = ["esp-firmware/esp32c5", "ble"]
+esp32c6  = ["esp-firmware/esp32c6"]
+esp32c61 = ["esp-firmware/esp32c61", "ble"]
+
+ble = ["esp-firmware/ble"]
+
+# The Signal Layer pipeline. Gates the generated pipeline module (see
+# `pipeline!()` in src/main.rs) and the driver/step crates it uses. The pipeline
+# is generated from board.yml + pipeline.yml at build time.
+pipeline = [
+    "dep:ads1115-driver",
+    "dep:adxl345-driver",
+    "dep:bme280-driver",
+    "dep:bmp180-driver",
+    "dep:ccs811-driver",
+    "dep:gpio-output-driver",
+    "dep:gpio-output-feedback-driver",
+    "dep:pwm-output-driver",
+    "dep:sim-source-driver",
+    "dep:spi-loopback-driver",
+    "dep:veml7700-driver",
+    "dep:wsen-itds-driver",
+    "dep:cadence",
+    "dep:fan-curve",
+    "dep:hysteresis",
+    "dep:max-value",
+    "dep:min-value",
+    "dep:moving-average",
+    "dep:threshold-trigger",
+]
+
+[dependencies]
+esp-firmware = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
+
+# Signal Layer driver and step crates, seeded for every module shipped with
+# myrmic so any pipeline built from board.yml + pipeline.yml compiles. Only the
+# modules your pipeline uses end up in the image. Add your own here to use custom
+# drivers or steps (see build.rs `.include(...)`).
+ads1115-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+adxl345-driver = { path = "../myrmic/signal-modules/drivers/adxl345", optional = true }
+bme280-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+bmp180-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+ccs811-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+gpio-output-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+gpio-output-feedback-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+pwm-output-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+sim-source-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+spi-loopback-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+veml7700-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+wsen-itds-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+cadence = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+fan-curve = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+hysteresis = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+max-value = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+min-value = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+moving-average = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+threshold-trigger = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+
+[build-dependencies]
+esp-firmware-build = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }

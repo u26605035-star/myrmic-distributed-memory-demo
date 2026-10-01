@@ -1,0 +1,4 @@
+[partitions]
+firmware_size = "6M"
+aot_size = "2M"
+flash_size = "8M"

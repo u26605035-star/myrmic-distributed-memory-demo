@@ -1,0 +1,14 @@
+[package]
+name = "knock-light"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[package.metadata.myrmic]
+heap_size = 32_768
+
+[dependencies]
+myrmic-sdk = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
+signal-layer-types = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", package = "myrmic-signal-layer-types" }
+
+serde = { version = "1", default-features = false, features = ["alloc", "derive"] }
