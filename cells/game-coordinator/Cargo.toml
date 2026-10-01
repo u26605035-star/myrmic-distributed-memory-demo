@@ -1,17 +1,15 @@
 [package]
 name = "adxl345-game-coordinator"
-version.workspace = true
-edition.workspace = true
-license.workspace = true
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
 publish = false
 
 [package.metadata.myrmic]
 heap_size = 16_384
 
-[lints]
-workspace = true
-
 [dependencies]
-myrmic-sdk = { workspace = true }
-myrmic-sdk-macros = { workspace = true }
-serde = { workspace = true }
+serde = { version = "1", default-features = false, features = ["alloc", "derive"] }
+
+myrmic-sdk = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
+myrmic-sdk-macros = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }

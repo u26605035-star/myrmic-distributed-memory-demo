@@ -26,7 +26,7 @@ The main application is a distributed memory/sequence game.
 
 `knock-light` demonstrates changing MCU application behavior without reflashing the native ESP32-C5 firmware.
 
-The `game-player-b` Cell can be removed from Node B and replaced with `knock-light-b` on the same running MCU.
+The `player-b` Cell can be removed from Node B and replaced with `knock-light-b` on the same running MCU.
 
 The replacement Cell uses the same ADXL345 and LED hardware but implements different behavior: detected knocks toggle the LED.
 
@@ -64,3 +64,21 @@ Current configuration:
 - Distributed memory/sequence game
 - RISC-V AOT Cell deployment
 - MCU Cell replacement without native firmware reflashing
+
+## Reproducing the Cell Replacement
+
+Deploy the distributed game first:
+
+    myrmic deploy app_specs.yml
+
+This deploys `player-a` to ESP32 Node A, `player-b` to ESP32 Node B, and `coordinator` to the Linux node.
+
+To replace the application behavior on Node B without reflashing the ESP32-C5 firmware, stop the running `player-b` Cell:
+
+    myrmic delete player-b --cell
+
+Then deploy the replacement Cell:
+
+    myrmic deploy app_specs_knock_light.yml
+
+This deploys `knock-light-b` to the same ESP32-C5 Node B (`@ESP32_RUNTIME_B`). The native firmware remains running; only the Myrmic Cell is replaced.

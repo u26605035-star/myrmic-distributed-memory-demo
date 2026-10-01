@@ -1,0 +1,24 @@
+name: adxl345-distributed-game
+
+classes:
+  - id: mcu-player
+    build: cells/game-player
+
+  - id: game-coordinator
+    build: cells/game-coordinator
+
+instances:
+  - class: mcu-player
+    srn: player-a
+    tags:
+      - "@ESP32_RUNTIME_A"
+
+  - class: mcu-player
+    srn: player-b
+    tags:
+      - "@ESP32_RUNTIME_B"
+
+  - class: game-coordinator
+    srn: coordinator
+    tags:
+      - linux

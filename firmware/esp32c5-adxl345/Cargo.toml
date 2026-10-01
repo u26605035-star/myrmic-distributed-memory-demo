@@ -61,7 +61,7 @@ esp-firmware = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed"
 # modules your pipeline uses end up in the image. Add your own here to use custom
 # drivers or steps (see build.rs `.include(...)`).
 ads1115-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-adxl345-driver = { path = "../myrmic/signal-modules/drivers/adxl345", optional = true }
+adxl345-driver = { path = "../../signal-modules/drivers/adxl345", optional = true }
 bme280-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
 bmp180-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
 ccs811-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }

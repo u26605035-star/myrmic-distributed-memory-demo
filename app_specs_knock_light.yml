@@ -1,0 +1,11 @@
+name: adxl345-knock-light
+
+classes:
+  - id: knock-light
+    build: cells/knock-light
+
+instances:
+  - class: knock-light
+    srn: knock-light-b
+    tags:
+      - "@ESP32_RUNTIME_B"
