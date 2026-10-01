@@ -2,10 +2,16 @@ name: adxl345-distributed-game
 
 classes:
   - id: mcu-player
-    build: cells/game-player
+    build:
+      path: cells/game-player
+      platforms:
+        - riscv32imac
 
   - id: game-coordinator
-    build: cells/game-coordinator
+    build:
+      path: cells/game-coordinator
+      platforms:
+        - linux
 
 instances:
   - class: mcu-player

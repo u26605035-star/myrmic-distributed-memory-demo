@@ -2,7 +2,10 @@ name: adxl345-knock-light
 
 classes:
   - id: knock-light
-    build: cells/knock-light
+    build:
+      path: cells/knock-light
+      platforms:
+        - riscv32imac
 
 instances:
   - class: knock-light

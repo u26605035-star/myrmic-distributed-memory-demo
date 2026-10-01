@@ -65,20 +65,58 @@ Current configuration:
 - RISC-V AOT Cell deployment
 - MCU Cell replacement without native firmware reflashing
 
+## Application Placement
+
+The application specifications contain the placeholders
+`@ESP32_RUNTIME_A` and `@ESP32_RUNTIME_B`.
+
+Before deployment, replace these placeholders with the system runtime tags
+reported for the two ESP32-C5 runtimes. Myrmic runtime system tags have the
+form `@<runtime-id>`.
+
+For example:
+
+    @ESP32_RUNTIME_A -> @<runtime-id-of-node-a>
+    @ESP32_RUNTIME_B -> @<runtime-id-of-node-b>
+
+The application specifications explicitly select `riscv32imac` for MCU Cells
+and `linux` for the coordinator. This causes Myrmic to generate RISC-V AOT
+artifacts for the ESP32-C5 Cells while building the coordinator for Linux.
+
 ## Reproducing the Cell Replacement
 
-Deploy the distributed game first:
+First deploy the distributed game:
 
-    myrmic deploy app_specs.yml
+    myrmic deploy app_specs.yml --timeout 30s
 
-This deploys `player-a` to ESP32 Node A, `player-b` to ESP32 Node B, and `coordinator` to the Linux node.
+This deploys two `mcu-player` Cells to the two ESP32-C5 runtimes and one
+`game-coordinator` Cell to the Linux runtime.
 
-To replace the application behavior on Node B without reflashing the ESP32-C5 firmware, stop the running `player-b` Cell:
+Inspect the deployed Cells:
 
-    myrmic delete player-b --cell
+    myrmic cells --once
 
-Then deploy the replacement Cell:
+Identify the SRI of the `mcu-player` running on ESP32 Node B. Remove only that
+Cell:
 
-    myrmic deploy app_specs_knock_light.yml
+    myrmic delete <PLAYER_B_SRI> --cell --timeout 30s
 
-This deploys `knock-light-b` to the same ESP32-C5 Node B (`@ESP32_RUNTIME_B`). The native firmware remains running; only the Myrmic Cell is replaced.
+The player on Node A and the Linux coordinator remain deployed.
+
+Then deploy the replacement application:
+
+    myrmic deploy app_specs_knock_light.yml --timeout 30s
+
+Inspect the swarm again:
+
+    myrmic cells --once
+
+The resulting deployment consists of:
+
+- `mcu-player` on ESP32-C5 Node A
+- `knock-light` on ESP32-C5 Node B
+- `game-coordinator` on the Linux node
+
+No native ESP32-C5 firmware reflash is required during this replacement. The
+running MCU firmware remains in place while the deployable Myrmic Cell on Node
+B is changed from the game player to `knock-light`.
