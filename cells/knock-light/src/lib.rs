@@ -5,10 +5,10 @@ use core::time::Duration;
 use myrmic_sdk::outlet::Outlet;
 use myrmic_sdk::signal_layer::ThresholdAlarm;
 use myrmic_sdk::tap::Tap;
-use myrmic_sdk::{Callback, Metadata, Result};
+use myrmic_sdk::{Callback, InMemory, Metadata, Result};
 use signal_layer_types::DigitalState;
 
-static mut LED_ON: bool = false;
+static LED_ON: InMemory<bool> = InMemory::new(false);
 
 #[myrmic_sdk::init]
 fn init(_md: Metadata) -> Result<()> {
@@ -48,10 +48,10 @@ fn check_tap(_md: Metadata) -> Result<()> {
         return Ok(());
     }
 
-    let new_state = unsafe {
-        LED_ON = !LED_ON;
-        LED_ON
-    };
+    let new_state = LED_ON.with(|led_on| {
+        *led_on = !*led_on;
+        *led_on
+    })?;
 
     let Some(led) = Outlet::resolve("led_cmd")? else {
         return Err("led_cmd outlet not found");

@@ -37,23 +37,36 @@ fn check_tap(_md: Metadata) -> Result<()> {
         return Ok(());
     };
 
+    // Treat all queued threshold events as one knock for this polling cycle.
+    let mut detected = false;
+    let mut value = 0.0_f32;
+    let mut threshold = 0.0_f32;
+
     while let Some(alarm) = tap.take_event_typed::<ThresholdAlarm>()? {
-        let id = runtime_id()?;
-
-        publish(
-            "tap_input",
-            &TapInput {
-                runtime_id: id,
-                value: alarm.value,
-            },
-        )?;
-
-        let _ = myrmic_sdk::info!(
-            "[adxl345-demo] TAP value={:.3}g threshold={:.3}g",
-            alarm.value,
-            alarm.threshold
-        );
+        detected = true;
+        value = alarm.value;
+        threshold = alarm.threshold;
     }
+
+    if !detected {
+        return Ok(());
+    }
+
+    let id = runtime_id()?;
+
+    publish(
+        "tap_input",
+        &TapInput {
+            runtime_id: id,
+            value,
+        },
+    )?;
+
+    let _ = myrmic_sdk::info!(
+        "[adxl345-demo] TAP value={:.3}g threshold={:.3}g",
+        value,
+        threshold
+    );
 
     Ok(())
 }
