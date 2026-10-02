@@ -10,8 +10,8 @@ checksum = "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa"
 
 [[package]]
 name = "ads1115-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -155,8 +155,8 @@ dependencies = [
 
 [[package]]
 name = "bme280-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -164,8 +164,8 @@ dependencies = [
 
 [[package]]
 name = "bmp180-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -231,8 +231,8 @@ dependencies = [
 
 [[package]]
 name = "cadence"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "signal-layer-core",
 ]
@@ -249,8 +249,8 @@ dependencies = [
 
 [[package]]
 name = "ccs811-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embassy-time",
  "embedded-hal 1.0.0",
@@ -260,8 +260,8 @@ dependencies = [
 
 [[package]]
 name = "cell-db-service"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "cell-protocol",
  "cfg-match",
@@ -285,8 +285,8 @@ dependencies = [
 
 [[package]]
 name = "cell-protocol"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "db-commons",
  "myrmic-common",
@@ -569,8 +569,8 @@ dependencies = [
 
 [[package]]
 name = "db-client"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "db-commons",
  "futures",
@@ -584,8 +584,8 @@ dependencies = [
 
 [[package]]
 name = "db-commons"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "hex",
  "postcard",
@@ -1101,8 +1101,8 @@ dependencies = [
 
 [[package]]
 name = "esp-codegen"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "anyhow",
  "include_dir",
@@ -1116,8 +1116,8 @@ dependencies = [
 
 [[package]]
 name = "esp-common"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "cell-db-service",
  "embassy-futures",
@@ -1151,8 +1151,8 @@ dependencies = [
 
 [[package]]
 name = "esp-firmware"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "cell-protocol",
  "critical-section",
@@ -1176,8 +1176,8 @@ dependencies = [
 
 [[package]]
 name = "esp-firmware-build"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "esp-codegen",
  "esp-mmu-consts",
@@ -1187,8 +1187,8 @@ dependencies = [
 
 [[package]]
 name = "esp-firmware-macros"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1227,9 +1227,9 @@ dependencies = [
  "esp32",
  "esp32c2",
  "esp32c3",
- "esp32c5 0.3.0",
+ "esp32c5",
  "esp32c6",
- "esp32c61 0.4.0",
+ "esp32c61",
  "esp32h2",
  "esp32p4",
  "esp32s2",
@@ -1269,8 +1269,8 @@ dependencies = [
 
 [[package]]
 name = "esp-heap"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "esp-alloc",
  "esp-hal",
@@ -1284,28 +1284,28 @@ source = "git+https://github.com/peeriot/esp-hal.git?branch=feature%2Fble-host-n
 
 [[package]]
 name = "esp-mmu"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "cfg-match",
  "critical-section",
  "embassy-sync 0.8.0",
  "esp-hal",
  "esp-mmu-consts",
- "esp32c5 0.2.2",
- "esp32c61 0.3.2",
+ "esp32c5",
+ "esp32c61",
  "log",
 ]
 
 [[package]]
 name = "esp-mmu-consts"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 
 [[package]]
 name = "esp-network"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "edge-nal",
  "edge-nal-embassy",
@@ -1366,9 +1366,9 @@ dependencies = [
  "esp-wifi-sys-esp32c5",
  "esp-wifi-sys-esp32c6",
  "esp-wifi-sys-esp32c61",
- "esp32c5 0.3.0",
+ "esp32c5",
  "esp32c6",
- "esp32c61 0.4.0",
+ "esp32c61",
  "log",
 ]
 
@@ -1419,9 +1419,9 @@ dependencies = [
  "esp-wifi-sys-esp32h2",
  "esp-wifi-sys-esp32s2",
  "esp-wifi-sys-esp32s3",
- "esp32c5 0.3.0",
+ "esp32c5",
  "esp32c6",
- "esp32c61 0.4.0",
+ "esp32c61",
  "heapless 0.9.3",
  "instability",
  "log",
@@ -1457,9 +1457,9 @@ source = "git+https://github.com/peeriot/esp-hal.git?branch=feature%2Fble-host-n
 dependencies = [
  "document-features",
  "esp-metadata-generated",
- "esp32c5 0.3.0",
+ "esp32c5",
  "esp32c6",
- "esp32c61 0.4.0",
+ "esp32c61",
 ]
 
 [[package]]
@@ -1498,9 +1498,9 @@ dependencies = [
  "esp-metadata-generated",
  "esp-rom-sys",
  "esp-sync",
- "esp32c5 0.3.0",
+ "esp32c5",
  "esp32c6",
- "esp32c61 0.4.0",
+ "esp32c61",
 ]
 
 [[package]]
@@ -1519,8 +1519,8 @@ dependencies = [
 
 [[package]]
 name = "esp-watchdog"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "cell-protocol",
  "critical-section",
@@ -1626,15 +1626,6 @@ dependencies = [
 
 [[package]]
 name = "esp32c5"
-version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a6f8ba56195df10224263c60ceb93b4578450019ee838b7338039a281117cb02"
-dependencies = [
- "vcell",
-]
-
-[[package]]
-name = "esp32c5"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97afa80d8110c7234f840252baa8ee8de28f78e8dc233d2d430c0ccfbe59a2b5"
@@ -1647,15 +1638,6 @@ name = "esp32c6"
 version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a207a5d6886ca89b4f220606dcf3779ca869803df192508314939186ae8de1ee"
-dependencies = [
- "vcell",
-]
-
-[[package]]
-name = "esp32c61"
-version = "0.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a926616351b1edfdb50b7ea6451a8dff0c7515c6ceb687063af7d32b117ec0d"
 dependencies = [
  "vcell",
 ]
@@ -1718,8 +1700,8 @@ dependencies = [
 
 [[package]]
 name = "fan-curve"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "myrmic-signal-layer-types",
  "signal-layer-core",
@@ -1899,8 +1881,8 @@ checksum = "e4eba85ea1d0a966a983acd07deee566e67395d2d96b6fb39e62b5a833f1eb0b"
 
 [[package]]
 name = "gpio-output-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal 1.0.0",
  "log",
@@ -1909,8 +1891,8 @@ dependencies = [
 
 [[package]]
 name = "gpio-output-feedback-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal 1.0.0",
  "gpio-output-driver",
@@ -2019,8 +2001,8 @@ dependencies = [
 
 [[package]]
 name = "hysteresis"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "myrmic-signal-layer-types",
  "signal-layer-core",
@@ -2252,8 +2234,8 @@ dependencies = [
 
 [[package]]
 name = "max-value"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "signal-layer-core",
 ]
@@ -2266,8 +2248,8 @@ checksum = "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
 
 [[package]]
 name = "min-value"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "signal-layer-core",
 ]
@@ -2301,16 +2283,16 @@ dependencies = [
 
 [[package]]
 name = "moving-average"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "signal-layer-core",
 ]
 
 [[package]]
 name = "myrmic-common"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-io 0.6.1",
  "heapless 0.9.3",
@@ -2332,8 +2314,8 @@ dependencies = [
 
 [[package]]
 name = "myrmic-sdk"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "chrono",
  "critical-section",
@@ -2352,8 +2334,8 @@ dependencies = [
 
 [[package]]
 name = "myrmic-sdk-macros"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -2367,16 +2349,16 @@ dependencies = [
 
 [[package]]
 name = "myrmic-signal-layer-types"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "serde",
 ]
 
 [[package]]
 name = "myrmic-tags"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 
 [[package]]
 name = "nb"
@@ -2498,8 +2480,8 @@ checksum = "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
 
 [[package]]
 name = "pipeline-backend-api"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "anyhow",
  "indexmap",
@@ -2512,8 +2494,8 @@ dependencies = [
 
 [[package]]
 name = "pipeline-codegen"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "anyhow",
  "indexmap",
@@ -2617,8 +2599,8 @@ dependencies = [
 
 [[package]]
 name = "pwm-output-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal 1.0.0",
  "log",
@@ -3102,8 +3084,8 @@ checksum = "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba"
 
 [[package]]
 name = "signal-layer-core"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "critical-section",
  "heapless 0.9.3",
@@ -3115,8 +3097,8 @@ dependencies = [
 
 [[package]]
 name = "sim-source-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -3185,8 +3167,8 @@ dependencies = [
 
 [[package]]
 name = "spi-loopback-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -3368,8 +3350,8 @@ dependencies = [
 
 [[package]]
 name = "threshold-trigger"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "myrmic-signal-layer-types",
  "signal-layer-core",
@@ -3694,8 +3676,8 @@ dependencies = [
 
 [[package]]
 name = "veml7700-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -3750,8 +3732,8 @@ checksum = "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
 
 [[package]]
 name = "wasm-runtime"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "bitflags 2.13.2",
  "cell-protocol",
@@ -3784,8 +3766,8 @@ dependencies = [
 
 [[package]]
 name = "wasm-runtime-macros"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3794,8 +3776,8 @@ dependencies = [
 
 [[package]]
 name = "wasm-storage"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "cfg-match",
  "crc",
@@ -3943,8 +3925,8 @@ dependencies = [
 
 [[package]]
 name = "wsen-itds-driver"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-hal-async",
  "log",
@@ -4044,8 +4026,8 @@ dependencies = [
 
 [[package]]
 name = "zenoh-nano"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "bt-hci",
  "defmt-or-log",

@@ -8,7 +8,7 @@ publish = false
 heap_size = 32_768
 
 [dependencies]
-myrmic-sdk = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
-signal-layer-types = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", package = "myrmic-signal-layer-types" }
+myrmic-sdk = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49" }
+signal-layer-types = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", package = "myrmic-signal-layer-types" }
 
 serde = { version = "1", default-features = false, features = ["alloc", "derive"] }

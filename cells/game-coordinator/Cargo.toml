@@ -11,5 +11,5 @@ heap_size = 16_384
 [dependencies]
 serde = { version = "1", default-features = false, features = ["alloc", "derive"] }
 
-myrmic-sdk = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
-myrmic-sdk-macros = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
+myrmic-sdk = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49" }
+myrmic-sdk-macros = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49" }

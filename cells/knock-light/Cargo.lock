@@ -222,8 +222,8 @@ checksum = "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
 
 [[package]]
 name = "myrmic-common"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "embedded-io 0.6.1",
  "heapless",
@@ -245,8 +245,8 @@ dependencies = [
 
 [[package]]
 name = "myrmic-sdk"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "chrono",
  "critical-section",
@@ -265,8 +265,8 @@ dependencies = [
 
 [[package]]
 name = "myrmic-sdk-macros"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "anyhow",
  "base64",
@@ -280,8 +280,8 @@ dependencies = [
 
 [[package]]
 name = "myrmic-signal-layer-types"
-version = "0.6.1"
-source = "git+https://github.com/peeriot/myrmic.git?rev=18a0c3ed#18a0c3edb7276aa9a8d247b5b02a6c5be2b361fb"
+version = "0.7.0"
+source = "git+https://github.com/peeriot/myrmic.git?rev=29a7dd91ec8223014c72cd4d6e22cf603b4cfa49#29a7dd91ec8223014c72cd4d6e22cf603b4cfa49"
 dependencies = [
  "postcard",
  "serde",

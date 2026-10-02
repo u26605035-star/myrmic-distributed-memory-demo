@@ -54,31 +54,31 @@ pipeline = [
 ]
 
 [dependencies]
-esp-firmware = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
+esp-firmware = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49" }
 
 # Signal Layer driver and step crates, seeded for every module shipped with
 # myrmic so any pipeline built from board.yml + pipeline.yml compiles. Only the
 # modules your pipeline uses end up in the image. Add your own here to use custom
 # drivers or steps (see build.rs `.include(...)`).
-ads1115-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+ads1115-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
 adxl345-driver = { path = "../../signal-modules/drivers/adxl345", optional = true }
-bme280-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-bmp180-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-ccs811-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-gpio-output-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-gpio-output-feedback-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-pwm-output-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-sim-source-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-spi-loopback-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-veml7700-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-wsen-itds-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-cadence = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-fan-curve = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-hysteresis = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-max-value = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-min-value = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-moving-average = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
-threshold-trigger = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed", optional = true }
+bme280-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+bmp180-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+ccs811-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+gpio-output-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+gpio-output-feedback-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+pwm-output-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+sim-source-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+spi-loopback-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+veml7700-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+wsen-itds-driver = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+cadence = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+fan-curve = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+hysteresis = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+max-value = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+min-value = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+moving-average = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
+threshold-trigger = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49", optional = true }
 
 [build-dependencies]
-esp-firmware-build = { git = "https://github.com/peeriot/myrmic.git", rev = "18a0c3ed" }
+esp-firmware-build = { git = "https://github.com/peeriot/myrmic.git", rev = "29a7dd91ec8223014c72cd4d6e22cf603b4cfa49" }
